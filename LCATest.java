@@ -77,5 +77,52 @@ public class LCATest {
 		assertEquals("To check that LCA is 6", 6, lca3.findLCA(5,7).data);
 	}
 	
-
+///// tests I will run when I get DAG.java to work
+	
+	// first test with no node 
+	@Test
+	public void testDAG()
+	{
+		DAG dag = new DAG(0);
+		dag.root = null;
+		assertEquals("Check that LCA is null", null, dag.root);
+	}
+	
+	//Test for 1 node (parent node)
+	
+//	@Test
+//	public void testDAG2()
+//	{
+//		DAG dag = new DAG(1);
+//		dag.root = new Node(1);
+//		assertEquals("Check that LCA is 1", 1, dag.root);
+//		
+//	}
+	
+//	//5 vertices, 8 edges
+//	@Test 
+//	public void testDAG3()
+//	{
+//		DAG dag = new DAG(5);
+//		dag.root = new Node(1);
+//		
+//		dag.node = new Node(5);	//cant use .left or .right anymore .... 
+//		dag.addEdge(1,5);
+//		
+//		dag.node = new Node(3);
+//		dag.addEdge(1,3);
+//		
+//		dag.node = new Node(6);
+//		dag.addEdge(1,6);
+//		
+//		dag.node = new Node(9);
+//		dag.addEdge(1,9);
+//		
+//		dag.addEdge(5,3);
+//		dag.addEdge(6,3);
+//		dag.addEdge(3,9);
+//		dag.addEdge(6,9);
+//		
+//		assertEquals("Check LCA for 9 and 3 is 1", 1, dag.findLCA(9,3).data);
+//	}
 }
